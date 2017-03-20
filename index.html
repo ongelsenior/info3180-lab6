@@ -28,16 +28,14 @@ app.controller("myCtrl", function($scope) {
 </script>
 <div>
     <h1>MY SHOPPING LIST</h1>
-    <h2>List</h2>
-
+    <h2>Shopping List</h2>
 </div>
-<div ng-app="myShoppingList" ng-controller="myCtrl">
-  <ul>
-    <li ng-repeat="x in products">{{x}}<span ng-click="removeItem($index)">×</span></li>
+<div class="box" ng-app="myShoppingList" ng-controller="myCtrl">
+  <ul class="table" ng-repeat="x in products">{{x}}<span ng-click="removeItem($index)">×</span>
   </ul>
-  <input ng-model="addMe">
+  <input placeholder="Add shopping items here" ng-model="addMe">
   <button ng-click="addItem()">Add Item</button>
-  <p>{{errortext}}</p>
+  <p class="red">{{errortext}}</p>
 </div>
 
 <p>If you add an item twice you will get an error message.</p>
